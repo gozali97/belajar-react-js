@@ -6,6 +6,7 @@ import Counter from './components/Counter';
 import { IconBrandGoogle } from '@tabler/icons-react';
 import Input from './components/Input';
 import Label from './components/Label';
+import Todo from './components/todo';
 
 function App() {
     // const [name, setName] = useState('');
@@ -27,32 +28,35 @@ function App() {
 
     return (
         <PlaceContentCenter>
-            <Card>
-                <Card.Title>Login web</Card.Title>
-                <form onSubmit={submit}>
-                    <Card.Body>
-                        <div className='mb-5 border rounded-lg p-2'>
-                            <p>Name : {form.name || '____'}</p>
-                            <p>Email : {form.email || '____'}</p>
-                        </div>
-                        <div className='mb-6'>
-                            <Label htmlFor='name' value={'Name'} />
-                            <Input value={form.name} onChange={onChange} id={'name'} name={'name'} type={'text'} />
-                        </div>
-                        <div className='mb-6'>
-                            <Label htmlFor='email' value={'Email'} />
-                            <Input value={form.email} onChange={onChange} id={'email'} type={'email'} name={'email'} />
-                        </div>
-                    </Card.Body>
-                    <Card.Footer>
-                        <Button className='bg-blue-900'>
-                            <IconBrandGoogle />
-                            Login
-                        </Button>
-                    </Card.Footer>
-                </form>
-            </Card>
+            <Todo></Todo>
         </PlaceContentCenter>
+        // <PlaceContentCenter>
+        //     <Card>
+        //         <Card.Title>Login web</Card.Title>
+        //         <form onSubmit={submit}>
+        //             <Card.Body>
+        //                 <div className='mb-5 border rounded-lg p-2'>
+        //                     <p>Name : {form.name || '____'}</p>
+        //                     <p>Email : {form.email || '____'}</p>
+        //                 </div>
+        //                 <div className='mb-6'>
+        //                     <Label htmlFor='name' value={'Name'} />
+        //                     <Input value={form.name} onChange={onChange} id={'name'} name={'name'} type={'text'} />
+        //                 </div>
+        //                 <div className='mb-6'>
+        //                     <Label htmlFor='email' value={'Email'} />
+        //                     <Input value={form.email} onChange={onChange} id={'email'} type={'email'} name={'email'} />
+        //                 </div>
+        //             </Card.Body>
+        //             <Card.Footer>
+        //                 <Button className='bg-blue-900'>
+        //                     <IconBrandGoogle />
+        //                     Login
+        //                 </Button>
+        //             </Card.Footer>
+        //         </form>
+        //     </Card>
+        // </PlaceContentCenter>
 
         // <PlaceContentCenter>
         //     <Counter initialValue={10} />
